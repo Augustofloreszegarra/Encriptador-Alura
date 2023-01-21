@@ -203,6 +203,7 @@ main {
     color: var(--dark-blue-300);
     background-color:  white;
     display: inline-block;
+    visibility: hidden;;
 }   
   
 .copiar:hover {
