@@ -37,6 +37,7 @@ function limpiar () {
   textoAEncriptar.value = "";
   iconoP.style.color = "#495057";
   iconoSvg.style.stroke = "#495057";
+  textoAEncriptar.focus();
 }
   
 svg.addEventListener("click",limpiar)
