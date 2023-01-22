@@ -35,6 +35,9 @@
     margin: 0;
     text-decoration: none;
 }
+script {
+    display: none;
+}
 
 head {
     display: none;
@@ -79,7 +82,6 @@ main {
     align-items: center;
     user-select: none;
     gap: 32px;
-    border: 1px solid greenyellow;;
 }
 
 .text-area, .texto-encriptado {
@@ -98,8 +100,21 @@ main {
 .text-area {
     height: 80%;
 }
+
 .texto-encriptado {
     height: 80%;
+}
+
+span {
+    position: absolute;
+    z-index: 5000;
+    scale: 0.8;
+    right: 20px;
+    top: 20px;
+}
+
+span svg {
+    stroke: var(--light-blue-400);
 }
 
 .icono {
@@ -112,17 +127,18 @@ main {
     user-select: none;
 }
 
+.icono svg {
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+    stroke: var(--gray-400);
+} 
+
 .icono p {
     color: var(--gray-400);
     font-size: .6em;
     transition: all .2s ease-in-out;
 }
-
-.icono img {
-    width: 15px;
-    height: 15px;
-    margin-top: 4px;
-} 
 
 .botones {
     display: flex;
@@ -265,63 +281,6 @@ main {
         padding-bottom: 20px;
     } 
     .copiar, .texto-encriptado {
-        visibility: hidden;
+        display: none;
     }
   }
-
-  
-/*
-
-@media (min-width: 850px) {
-    main {
-        flex-direction: row;
-        height: 100%
-    }
-    .main-left {
-        width: 80%;
-        display: block;
-        border: solid rgb(42, 201, 14) 3px; 
-        position: relative;
-    }
-    .main-right{
-        width: 35%;
-        display: block;
-        border: solid rgb(42, 201, 14) 3px;
-        position: relative;
-    }
-    .logo {
-        border: solid orange 3px;
-        display: block;
-        position: fixed;
-
-    }
-    .input-container{
-        border: solid rgb(217, 191, 143) 3px;
-        height: 400px;
-        display: block;
-        position: fixed;
-    }
-    #input {
-        height: 70%;
-        border: solid rgb(42, 14, 204) 3px;
-        display: block;
-        position: fixed;
-    }
-    .icono{
-        border: solid rgb(28, 183, 225) 3px;
-        display: block;
-        position: fixed;
-    }
-    .buttons{
-        border: solid rgb(166, 27, 221) 3px;
-        height: 50px;
-        display: inline-block
-    }
-    .sin-texto{
-        height: 50vh;
-    }
-    .screen-container {
-        height: 50vh;
-    }
-  } */
-
