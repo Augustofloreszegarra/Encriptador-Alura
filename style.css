@@ -16,8 +16,6 @@
   --gray-300: #868e96;
   --gray-400: #495057;
   --gray-500: #343a40;
-  --encriptar-hover: rgb(60, 92, 196);
-  --desencriptar-hover: rgb(226, 228, 241);
 }
 
 * {
@@ -40,7 +38,7 @@ script {
 }
 
 body {
-  height: 90vh;
+  height: 100%;
 }
 
 head {
@@ -229,9 +227,18 @@ span svg {
   background-color: var(--light-blue-100);
 }
 
+.Footer-hiden {
+  display: none;
+  background-color: transparent;
+}
+
 @media (min-width: 450px) {
   .btn {
     width: 370px;
+  }
+  .Footer-hiden {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -288,4 +295,46 @@ span svg {
   .texto-encriptado {
     display: none;
   }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  margin: -18px auto 0;
+  background-color: transparent;
+}
+
+.footer-center {
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: transparent;
+}
+
+.footer-center p {
+  gap: 2px;
+  color: var(--gray-400);
+  font-size: .4rem;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: transparent;
+}
+
+.footer-center p a {
+  font-size: .45rem;
+  margin-top: -2px;
+}
+
+.footer-icons {
+  margin-left: 10px;
+  flex-direction: row;
+}
+
+.footer-icons a {
+  font-size: 5px;
+  margin-right: 5px;
 }
